@@ -1,0 +1,17 @@
+# This profile is based on the archive.yml profile created by Sveriges Television AB
+# See https://github.com/svt/encore/blob/master/src/test/resources/profile/archive.yml
+name: archive
+description: Archive format
+encodes:
+  - type: VideoEncode
+    codec: dnxhd
+    height: 1080
+    params:
+      b:v: 185M
+      pix_fmt: yuv422p10le
+    suffix: _DNxHD_185x
+    format: mxf
+    twoPass: false
+    audioEncode:
+      type: SimpleAudioEncode
+      codec: pcm_s24le

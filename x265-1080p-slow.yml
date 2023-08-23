@@ -1,0 +1,21 @@
+name: x265-1080p-slow
+description: HEVC profile
+scaling: bicubic
+encodes:
+  - type: X265Encode
+    suffix: _x265_2600
+    twoPass: true
+    height: 1080
+    params:
+      b:v: 2600k
+      maxrate: 3900k
+      bufsize: 5200k
+      r: 25
+      pix_fmt: yuv420p10le
+      profile:v: main10
+      tag:v: hvc1
+      force_key_frames: expr:not(mod(n,96))
+      preset: slow
+    x265-params:
+      min-keyint: 96
+      keyint: 96

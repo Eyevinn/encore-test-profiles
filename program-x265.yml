@@ -55,6 +55,7 @@ encodes:
       limit-tu: 0
     audioEncode:
       type: AudioEncode
+      codec: aac
       bitrate: 192k
       suffix: STEREO
 
@@ -109,6 +110,7 @@ encodes:
       limit-tu: 0
     audioEncode:
       type: AudioEncode
+      codec: aac
       bitrate: 128k
       suffix: STEREO
 
@@ -163,6 +165,7 @@ encodes:
       limit-tu: 0
     audioEncode:
       type: AudioEncode
+      codec: aac
       bitrate: 128k
       suffix: STEREO
       samplerate: 48000
@@ -219,10 +222,12 @@ encodes:
       limit-tu: 0
     audioEncode:
       type: AudioEncode
+      codec: aac
       bitrate: 128k
       suffix: STEREO
 
   - type: AudioEncode
+    codec: aac
     bitrate: 128k
     suffix: _STEREO
 

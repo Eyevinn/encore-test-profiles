@@ -1,5 +1,5 @@
 name: x264-1080p-slow
-description: Program profile
+description: x264 slow
 scaling: bicubic
 encodes:
   - type: X264Encode

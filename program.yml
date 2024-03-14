@@ -41,6 +41,7 @@ encodes:
       trellis: 2
       weightp: 2
     audioEncode:
+      optional: true
       type: AudioEncode
       codec: aac
       bitrate: 128k
@@ -83,6 +84,7 @@ encodes:
       trellis: 2
       weightp: 2
     audioEncode:
+      optional: true
       type: AudioEncode
       codec: aac
       bitrate: 128k
@@ -125,6 +127,7 @@ encodes:
       trellis: 2
       weightp: 2
     audioEncode:
+      optional: true
       type: AudioEncode
       codec: aac
       bitrate: 96k
@@ -167,6 +170,7 @@ encodes:
       trellis: 2
       weightp: 2
     audioEncode:
+      optional: true
       type: AudioEncode
       codec: aac
       bitrate: 96k
@@ -203,12 +207,14 @@ encodes:
       subme: 9
       trellis: 2
     audioEncode:
+      optional: true
       type: AudioEncode
       codec: aac
       bitrate: 96k
       suffix: STEREO
 
   - type: AudioEncode
+    optional: true
     codec: aac
     bitrate: 128k
     suffix: _STEREO

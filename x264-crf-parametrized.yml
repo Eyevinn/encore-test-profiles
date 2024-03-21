@@ -13,5 +13,12 @@ encodes:
       pix_fmt: yuv420p
       force_key_frames: expr:not(mod(n,96))
       preset: #{profileParams['preset']?:"medium"}
+      movflags: faststart
+    audioEncode:
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
 
 

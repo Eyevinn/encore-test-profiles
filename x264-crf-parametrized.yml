@@ -11,7 +11,7 @@ encodes:
       r: 25
       fps_mode: cfr
       pix_fmt: yuv420p
-      force_key_frames: expr:not(mod(n,96))
+      force_key_frames: #{profileParams['keyframes']?:'expr:not(mod(n,96))'}
       preset: #{profileParams['preset']?:"medium"}
       movflags: faststart
     audioEncode:

@@ -1,5 +1,6 @@
 program: program.yml
 program-x265: program-x265.yml
+program-kf: program-kf.yml
 archive: archive.yml
 x264-1080p-slow: x264-1080p-slow.yml
 x264-1080p-medium: x264-1080p-medium.yml

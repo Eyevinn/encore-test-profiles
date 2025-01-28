@@ -6,6 +6,7 @@ Some basic transcoding profiles for testing encores.
 | --- | --- |
 | program | x264 ABR ladder with five rungs, stereo and surround audio, thumbnails, thumbnail map |
 | program-x265 | x265 ABR ladder with five rungs, stereo and surround audio, thumbnails, thumbnail map |
+| program-kf | x265 ABR ladder with five rungs, stereo and surround audio, thumbnails, thumbnail map, option to override keyframe injections |
 | archive | DNXHD 185Mbit/s encode with pcm audio |
 | x264_1080p_slow | x264, 2-pass VBR ~3100kbit/s, 1920x1080, 25fps, 96 frames GOP, preset slow |
 | x265_1080p_slow | x265, 2-pass VBR ~2600kbit/s, 10bit, 1920x1080, 25fps, 96 frames GOP, preset slow |

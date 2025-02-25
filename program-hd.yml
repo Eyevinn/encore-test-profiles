@@ -211,12 +211,6 @@ encodes:
       bitrate: 96k
       suffix: STEREO
 
-  - type: AudioEncode
-    optional: true
-    codec: aac
-    bitrate: 96k
-    suffix: _STEREO
-
   - type: X264Encode
     suffix: _300_216p
     twoPass: false

@@ -9,7 +9,7 @@ encodes:
     params:
       b:v: 6372k
       maxrate: 7000k
-      bufsize: 6500k
+      bufsize: 10000k
       r: 25
       fps_mode: cfr
       pix_fmt: yuv420p
@@ -52,7 +52,7 @@ encodes:
     params:
       b:v: 3872k
       maxrate: 4200k
-      bufsize: 4138k
+      bufsize: 6000k
       r: 25
       fps_mode: cfr
       pix_fmt: yuv420p
@@ -95,7 +95,7 @@ encodes:
     params:
       b:v: 2372k
       maxrate: 2800k
-      bufsize: 2524k
+      bufsize: 3800k
       r: 25
       fps_mode: cfr
       pix_fmt: yuv420p
@@ -138,7 +138,7 @@ encodes:
     params:
       b:v: 1372k
       maxrate: 1600k
-      bufsize: 1612242
+      bufsize: 2100k
       r: 25
       fps_mode: cfr
       pix_fmt: yuv420p
@@ -181,7 +181,7 @@ encodes:
     params:
       b:v: 672k
       maxrate: 800k
-      bufsize: 648102
+      bufsize: 1100k
       r: 25
       fps_mode: cfr
       pix_fmt: yuv420p
@@ -218,7 +218,7 @@ encodes:
     params:
       b:v: 204k
       maxrate: 250k
-      bufsize: 648102
+      bufsize: 310k
       r: 25
       fps_mode: cfr
       pix_fmt: yuv420p

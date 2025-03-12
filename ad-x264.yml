@@ -3,7 +3,7 @@ description: Ad profile
 scaling: bicubic # lanczos might e better, but has a performance impact
 encodes:
   - type: X264Encode
-    suffix: _x264_#{profileParams['fps']?:"25"}_crf_#{profileParams['crf']?:23}
+    suffix: _x264_#{profileParams['fps']?:"25"}_1080
     twoPass: false # Might want 2-pass, we'll see
     height: 1080
     params:
@@ -33,7 +33,7 @@ encodes:
       bitrate: 128k
       suffix: STEREO
   - type: X264Encode
-    suffix: _x264_#{profileParams['fps']?:"25"}_crf_#{profileParams['crf']?:23}
+    suffix: _x264_#{profileParams['fps']?:"25"}_720
     twoPass: false # Might want 2-pass, we'll see
     height: 720
     params:
@@ -63,7 +63,7 @@ encodes:
       bitrate: 128k
       suffix: STEREO
   - type: X264Encode
-    suffix: _x264_#{profileParams['fps']?:"25"}_crf_#{profileParams['crf']?:23}
+    suffix: _x264_#{profileParams['fps']?:"25"}_540
     twoPass: false # Might want 2-pass, we'll see
     height: 540
     params:
@@ -93,7 +93,7 @@ encodes:
       bitrate: 128k
       suffix: STEREO
   - type: X264Encode
-    suffix: _x264_#{profileParams['fps']?:"25"}_crf_#{profileParams['crf']?:23}
+    suffix: _x264_#{profileParams['fps']?:"25"}_432
     twoPass: false # Might want 2-pass, we'll see
     height: 432
     params:

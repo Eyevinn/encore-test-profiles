@@ -7,4 +7,5 @@ x264-1080p-medium: x264-1080p-medium.yml
 x265-1080p-slow: x265-1080p-slow.yml
 x265-1080p-medium: x265-1080p-medium.yml
 x264-crf-parametrized: x264-crf-parametrized.yml
+ad-x264: ad-x264.yml
 none:

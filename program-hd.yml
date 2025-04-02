@@ -254,8 +254,3 @@ encodes:
     bitrate: 128k
     suffix: _STEREO
 
-  - type: ThumbnailMapEncode
-
-  - type: ThumbnailEncode
-
-

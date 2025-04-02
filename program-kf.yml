@@ -221,7 +221,8 @@ encodes:
     suffix: _STEREO
 
   - type: ThumbnailMapEncode
+    decodeOutput: 0
 
   - type: ThumbnailEncode
-
+    decodeOutput: 0
 

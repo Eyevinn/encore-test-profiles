@@ -1,0 +1,37 @@
+name: ad-x264-4-by-3
+description: Ad profile for 4:3 content
+scaling: bicubic # lanczos might e better, but has a performance impact
+encodes:
+- type: X264Encode
+  suffix: _x264_4-3_540_25
+  twoPass: false # Might want 2-pass, we'll see
+  height: 576
+  width: 768
+  filters:
+  - "pad=ih*4/3:ih:(ow-iw)/2:(oh-ih)/2" # Pad to 4:3
+  params:
+      b:v: 2500k
+      maxrate: 3750k
+      bufsize: 5000k
+      r: 25
+      fps_mode: cfr
+      pix_fmt: yuv420p
+      tag:v: avc1
+      force_key_frames: "expr:not(mod(n,96))"
+      profile:v: main
+      level: 3.1
+  x264-params:
+      deblock: 0,0
+      aq-mode: 1
+      aq-strength: 1.0
+      keyint: 192
+      keyint_min: 96
+      me: hex
+      merange: 16
+      cabac: 1
+  audioEncode:
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO

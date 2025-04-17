@@ -8,7 +8,7 @@ encodes:
   height: 576
   width: 768
   filters:
-  - "pad=ih*4/3:ih:(ow-iw)/2:(oh-ih)/2" # Pad to 4:3
+  - "pad=width=max(iw,ih*(4/3)):height=ow/(4/3):x=(ow-iw)/2:y=(oh-ih)/2" # Pad to 4:3
   params:
       b:v: 2500k
       maxrate: 3750k

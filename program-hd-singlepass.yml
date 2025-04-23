@@ -1,0 +1,159 @@
+name: program-hd-singlepass
+description: Program HD profile (25fps) Single Pass
+scaling: bicubic
+encodes:
+  - type: X264Encode
+    suffix: _6500_1080p
+    twoPass: false
+    height: 1080
+    params:
+      preset: medium
+      b:v: 6372k
+      maxrate: 7000k
+      bufsize: 10000k
+      r: 25
+      fps_mode: cfr
+      pix_fmt: yuv420p
+      force_key_frames: #{profileParams['keyframes']?:'expr:not(mod(n,96))'}
+      profile:v: high
+      level: 4.1
+    x264-params:
+      keyint: 192
+      keyint_min: 96
+    audioEncode:
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+
+  - type: X264Encode
+    suffix: _4000_720p
+    twoPass: false
+    height: 720
+    params:
+      preset: medium
+      b:v: 3872k
+      maxrate: 4200k
+      bufsize: 6000k
+      r: 25
+      fps_mode: cfr
+      pix_fmt: yuv420p
+      force_key_frames: #{profileParams['keyframes']?:'expr:not(mod(n,96))'}
+      profile:v: main
+      level: 3.1
+    x264-params:
+      keyint: 192
+      keyint_min: 96
+    audioEncode:
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+
+  - type: X264Encode
+    suffix: _2500_576p
+    twoPass: false
+    height: 540
+    params:
+      preset: medium
+      b:v: 2372k
+      maxrate: 2800k
+      bufsize: 3800k
+      r: 25
+      fps_mode: cfr
+      pix_fmt: yuv420p
+      force_key_frames: #{profileParams['keyframes']?:'expr:not(mod(n,96))'}
+      level: 3.1
+      profile:v: main
+    x264-params:
+      keyint: 192
+      keyint_min: 96
+    audioEncode:
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+
+  - type: X264Encode
+    suffix: _1500_432p
+    twoPass: false
+    height: 432
+    params:
+      preset: medium
+      b:v: 1372k
+      maxrate: 1600k
+      bufsize: 2100k
+      r: 25
+      fps_mode: cfr
+      pix_fmt: yuv420p
+      force_key_frames: #{profileParams['keyframes']?:'expr:not(mod(n,96))'}
+      profile:v: main
+      level: 3.1
+    x264-params:
+      keyint: 192
+      keyint_min: 96
+    audioEncode:
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+
+  - type: X264Encode
+    suffix: _800_360p
+    twoPass: false
+    height: 360
+    params:
+      preset: medium
+      b:v: 672k
+      maxrate: 800k
+      bufsize: 1100k
+      r: 25
+      fps_mode: cfr
+      pix_fmt: yuv420p
+      force_key_frames: #{profileParams['keyframes']?:'expr:not(mod(n,96))'}
+      profile:v: baseline
+      level: 3.1
+    x264-params:
+      keyint: 192
+      keyint_min: 96
+    audioEncode:
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 96k
+      suffix: STEREO
+
+  - type: X264Encode
+    suffix: _300_216p
+    twoPass: false
+    height: 216
+    params:
+      preset: medium
+      b:v: 204k
+      maxrate: 250k
+      bufsize: 310k
+      r: 25
+      fps_mode: cfr
+      pix_fmt: yuv420p
+      force_key_frames: #{profileParams['keyframes']?:'expr:not(mod(n,96))'}
+      profile:v: baseline
+      level: 3.1
+    x264-params:
+      keyint: 192
+      keyint_min: 96
+    audioEncode:
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 96k
+      suffix: STEREO
+
+  - type: AudioEncode
+    optional: true
+    codec: aac
+    bitrate: 128k
+    suffix: _STEREO

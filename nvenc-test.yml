@@ -1,0 +1,38 @@
+name: nvenc-test
+description: "NVENC HEVC profile
+
+Note:
+This profiles require encore version 0.2.8-4 or later.
+This profile requires using cuda hardware decoding by specifying cuda
+hardware decoding on the input
+by setting parameters as below
+    \"params\": {
+        \"hwaccel\": \"cuda\",
+        \"hwaccel_output_format\": \"cuda\"
+      }
+"
+scaling: bicubic
+filterSettings:
+  scaleFilter: scale_cuda
+  scaleFilterParams:
+    format: p010le
+encodes:
+  - type: VideoEncode
+    codec: hevc_nvenc
+    format: mp4
+    suffix: _x265_2600
+    twoPass: false
+    height: 1080
+    params:
+      b:v: 2600k
+      maxrate: 3900k
+      bufsize: 5200k
+      r: 25
+      profile:v: main10
+      tag:v: hvc1
+      force_key_frames: expr:not(mod(n,96))
+    audioEncode:
+      type: AudioEncode
+      codec: aac
+      bitrate: 192k
+      suffix: STEREO

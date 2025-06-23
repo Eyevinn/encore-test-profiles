@@ -1,0 +1,107 @@
+name: program-nvenc-h265
+description: "HEVC with nvencprofile
+
+Note:
+This profiles require encore version 0.2.8-4 or later.
+This profile requires using cuda hardware decoding by specifying cuda
+hardware decoding on the input
+by setting parameters as below
+    \"params\": {
+        \"hwaccel\": \"cuda\",
+        \"hwaccel_output_format\": \"cuda\"
+      }
+
+"
+scaling: bicubic
+filterSettings:
+  scaleFilter: scale_cuda
+  scaleFilterParams:
+    format: p010le
+encodes:
+  - type: VideoEncode
+    codec: hevc_nvenc
+    format: mp4
+    suffix: _x265_2600
+    twoPass: false
+    height: 1080
+    params:
+      b:v: 2600k
+      maxrate: 3900k
+      bufsize: 5200k
+      r: 25
+      profile:v: main10
+      tag:v: hvc1
+      force_key_frames: expr:not(mod(n,96))
+    audioEncode:
+      type: AudioEncode
+      codec: aac
+      bitrate: 192k
+      suffix: STEREO
+
+  - type: VideoEncode
+    codec: hevc_nvenc
+    format: mp4
+    suffix: _x265_1598
+    twoPass: false
+    height: 720
+    params:
+      b:v: 1536847
+      maxrate: 2305271
+      bufsize: 3073694
+      r: 25
+      profile:v: main10
+      tag:v: hvc1
+      force_key_frames: expr:not(mod(n,96))
+    audioEncode:
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+
+  - type: VideoEncode
+    codec: hevc_nvenc
+    format: mp4
+    suffix: _x265_865
+    twoPass: false
+    height: 540
+    params:
+      b:v: 865857
+      maxrate: 1298786
+      bufsize: 1731714
+      r: 25
+      profile:v: main10
+      tag:v: hvc1
+      force_key_frames: expr:not(mod(n,96))
+    audioEncode:
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+      samplerate: 48000
+      channels: 2
+
+  - type: VideoEncode
+    codec: hevc_nvenc
+    format: mp4
+    suffix: _x265_474
+    twoPass: false
+    height: 360
+    params:
+      b:v: 695711
+      maxrate: 1043567
+      bufsize: 1391422
+      r: 25
+      profile:v: main
+      tag:v: hvc1
+      force_key_frames: expr:not(mod(n,96))
+    audioEncode:
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+
+  - type: AudioEncode
+    codec: aac
+    bitrate: 128k
+    suffix: _STEREO
+    optional: true

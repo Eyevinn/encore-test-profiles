@@ -181,6 +181,9 @@ encodes:
       bufsize: 1391422
       r: 25
       pix_fmt: yuv420p
+      colorspace: bt709
+      color_primaries: bt709
+      color_trc: bt709
       profile:v: main
       tag:v: hvc1
       force_key_frames: expr:not(mod(n,96))

@@ -11,6 +11,9 @@ encodes:
       r: 25
       fps_mode: cfr
       pix_fmt: yuv420p
+      colorspace: bt709
+      color_primaries: bt709
+      color_trc: bt709
       force_key_frames: #{profileParams['keyframes']?:'expr:not(mod(n,96))'}
       preset: #{profileParams['preset']?:"medium"}
       movflags: faststart

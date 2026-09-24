@@ -15,6 +15,9 @@ encodes:
       r: 25
       fps_mode: cfr
       pix_fmt: yuv420p
+      colorspace: bt709
+      color_primaries: bt709
+      color_trc: bt709
       force_key_frames: expr:not(mod(n,96))
       profile:v: high
       level: 4.1
@@ -58,6 +61,9 @@ encodes:
       r: 25
       fps_mode: cfr
       pix_fmt: yuv420p
+      colorspace: bt709
+      color_primaries: bt709
+      color_trc: bt709
       force_key_frames: expr:not(mod(n,96))
       profile:v: main
       level: 3.1
@@ -101,6 +107,9 @@ encodes:
       r: 25
       fps_mode: cfr
       pix_fmt: yuv420p
+      colorspace: bt709
+      color_primaries: bt709
+      color_trc: bt709
       force_key_frames: expr:not(mod(n,96))
       level: 3.1
       profile:v: main
@@ -144,6 +153,9 @@ encodes:
       r: 25
       fps_mode: cfr
       pix_fmt: yuv420p
+      colorspace: bt709
+      color_primaries: bt709
+      color_trc: bt709
       force_key_frames: expr:not(mod(n,96))
       profile:v: main
       level: 3.1
@@ -187,6 +199,9 @@ encodes:
       r: 25
       fps_mode: cfr
       pix_fmt: yuv420p
+      colorspace: bt709
+      color_primaries: bt709
+      color_trc: bt709
       force_key_frames: expr:not(mod(n,96))
       profile:v: baseline
       level: 3.1
